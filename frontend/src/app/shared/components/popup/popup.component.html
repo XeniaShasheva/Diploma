@@ -1,0 +1,57 @@
+
+    <div class="services-popup"  >
+        <div class="services-popup-body">
+            <div class="services-popup-icon-close" [mat-dialog-close]="true">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1.9355" y1="2.64999" x2="13.9563" y2="14.6708" stroke="#BEBEBE" stroke-linecap="round"/>
+                    <line x1="13.9236" y1="2.62978" x2="1.90277" y2="14.6506" stroke="#BEBEBE" stroke-linecap="round"/>
+                    </svg>
+            </div>
+            <div class="services-popup-form" [formGroup]="serviceForm" *ngIf="showServicePopupForm">
+                    <div class="services-popup-form-title">{{data.name}}</div>
+                <input
+                *ngIf="data.input.length"
+                type="text" class="input-services"
+                formControlName="serviceType">
+                <input type="text" placeholder="Ваше имя"
+                [ngStyle]="{'border-color':serviceForm.get('name')?.invalid
+                &&(serviceForm.get('name')?.dirty || serviceForm.get('name')?.touched)? 'red':''}"
+               formControlName="name">
+
+              <div class=""style="color: red;" *ngIf="serviceForm.get('name')?.invalid && (serviceForm.get('name')?.dirty || serviceForm.get('name')?.touched)">
+                <div class="text-danger" *ngIf="serviceForm.get('name')?.errors?.['required']">
+                  Поле "имя" обязательно</div>
+                <div class="text-danger" *ngIf="serviceForm.get('name')?.errors?.['pattern']">
+                  Имя должно начинаться с заглавной буквы, только русские буквы</div>
+              </div>
+
+
+                <input type="text" placeholder="Ваш номер телефона"
+                [ngStyle]="{'border-color':serviceForm.get('phone')?.invalid
+                &&(serviceForm.get('phone')?.dirty || serviceForm.get('phone')?.touched)? 'red':''}"
+               formControlName="phone">
+
+              <div class=""style="color: red;" *ngIf="serviceForm.get('phone')?.invalid && (serviceForm.get('phone')?.dirty || serviceForm.get('phone')?.touched)">
+                <div class="text-danger" *ngIf="serviceForm.get('phone')?.errors?.['required']">
+                  Поле "Номер телефона" обязательно</div>
+                <div class="text-danger" *ngIf="serviceForm.get('phone')?.errors?.['pattern']">
+                  Введите корректный номер телефона</div>
+              </div>
+
+<!--                <div class="" style="color: red;"-->
+<!--                *ngIf="serviceForm.get('phone')?.invalid-->
+<!--                &&(serviceForm.get('phone')?.dirty || serviceForm.get('phone')?.touched)">Введите номер телефона-->
+<!--                </div>-->
+
+
+                <button class="button services-popup-form-buttom" [disabled]="serviceForm.invalid" (click)="sendServiceFormData()">Оставить заявку</button>
+            </div>
+            <div class="services-popup-finish" *ngIf="!showServicePopupForm">
+                    <div class="services-popup-finish-title">Спасибо за вашу заявку!</div>
+                <div class="services-popup-finish-text">Мы свяжемся с вами при первой же возможности.</div>
+                <div class="" >
+                    <div class="button services-popup-finish-buttom"  [mat-dialog-close]="true" >Окей</div>
+                </div>
+            </div>
+        </div>
+    </div>

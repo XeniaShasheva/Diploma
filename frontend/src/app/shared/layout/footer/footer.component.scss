@@ -1,0 +1,77 @@
+.footer {
+    background-color: #B9D5FD;
+    padding: 40px 0 54px;
+
+    .container {
+
+        .footer-top {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+
+            .footer-top-logo {
+                margin-right: 40px;
+                cursor: pointer;
+            }
+            .footer-top-menu {
+
+                ul{
+                    margin: 0 -10px;
+                    display: flex;
+                    a{
+                        padding: 0 10px;
+                        font-family: "Montserrat";
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #071739;
+                        cursor: pointer;
+
+                        &.active{
+                            color: #709FDC ;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-buttom {
+            display: flex;
+            .footer-buttom-block {
+                font-family: "Montserrat";
+                font-size: 16px;
+                margin-right: 60px;
+
+                .footer-head {
+                    margin-bottom: 10px;
+                    font-weight: 500;
+                    color: #709FDC;
+
+                }
+                .footer-contact {
+                    font-weight: 400;
+                    color: #071739;
+                    max-width: 253px;
+
+                }
+                .footer-contact-tel-button {
+                    font-family: "Montserrat";
+                    font-size: 12px;
+                    font-weight: 500;
+                    margin-top: 10px;
+                    display: block;
+                }
+                .footer-contact-messangere {
+                    display: flex;
+                    margin-top: 15px;
+                    a{
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+        .footer-span{
+            margin-top: 6px;
+            color: #709FDC;
+        }
+    }
+}
+

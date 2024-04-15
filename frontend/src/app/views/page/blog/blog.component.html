@@ -1,0 +1,65 @@
+<div class="blog">
+  <div class="container">
+    <div class="blog-title">Блог</div>
+    <div class="blog-header">
+      <div class="blog-filters">
+        <app-header-filter (updateParamsFilte)="updateFilterParam($event)"
+                           *ngFor="let activeParamsFilte of activeParamsFilter"
+                           [activeParamsFilte]="activeParamsFilte"></app-header-filter>
+      </div>
+      <div class="blog-corting open sortingOpen" [class.open]="sortingOpen">
+        <div class="blog-sorting-head " (click)="toggleSorting()">
+          <span>Фильтр</span>
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 14.5C9.41668 14.5 8.83335 14.275 8.39168 13.8334L2.95835 8.40003C2.71668 8.15837 2.71668 7.75837 2.95835 7.5167C3.20002 7.27503 3.60002 7.27503 3.84168 7.5167L9.27502 12.95C9.67502 13.35 10.325 13.35 10.725 12.95L16.1583 7.5167C16.4 7.27503 16.8 7.27503 17.0417 7.5167C17.2833 7.75837 17.2833 8.15837 17.0417 8.40003L11.6083 13.8334C11.1667 14.275 10.5833 14.5 10 14.5Z"
+              fill="#071739"/>
+          </svg>
+        </div>
+        <div class="blog-sorting-body">
+          <type-filter (urlStatusArticle)="updateFilterParam($event)"
+                       *ngFor="let categoriesArticle of categoriesArticles"
+                       [categoriesArticle]="categoriesArticle"></type-filter>
+        </div>
+      </div>
+    </div>
+
+    <div class="catalog-products">
+      <article-cart *ngFor="let article of articles" [article]="article"></article-cart>
+    </div>
+    <div class="pagination" *ngIf="this.statusSidebar!==1">
+      <div class="pagination-arrow pagination-arrow-prev"
+           (click)="openPrevPage()"
+           [class.disabled]="activeParams.page ? activeParams.page===1:true"
+
+      >
+        <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5.44392 1C5.59871 1 5.75349 1.05652 5.87569 1.17765L11.1873 6.44254C12.0508 7.29849 12.0508 8.70353 11.1873 9.55948L5.87569 14.8244C5.63944 15.0585 5.2484 15.0585 5.01215 14.8244C4.7759 14.5902 4.7759 14.2026 5.01215 13.9684L10.3238 8.70353C10.7148 8.31593 10.7148 7.68608 10.3238 7.29849L5.01215 2.0336C4.7759 1.79942 4.7759 1.41182 5.01215 1.17765C5.13435 1.0646 5.28914 1 5.44392 1Z"
+            fill="#B9D5FD"/>
+        </svg>
+
+
+      </div>
+      <div class="pagination-pages">
+        <a class="pagination-page"
+           (click)="openPage(page)"
+           [class.active]="activeParams.page ? activeParams.page===page:(page === 1)"
+           *ngFor="let page of pages">{{page}}</a>
+      </div>
+      <div class="pagination-arrow pagination-arrow-next"
+           (click)="openNextPage()"
+           [class.disabled]="activeParams.page ? activeParams.page===pages.length:false"
+
+      >
+        <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5.44392 1C5.59871 1 5.75349 1.05652 5.87569 1.17765L11.1873 6.44254C12.0508 7.29849 12.0508 8.70353 11.1873 9.55948L5.87569 14.8244C5.63944 15.0585 5.2484 15.0585 5.01215 14.8244C4.7759 14.5902 4.7759 14.2026 5.01215 13.9684L10.3238 8.70353C10.7148 8.31593 10.7148 7.68608 10.3238 7.29849L5.01215 2.0336C4.7759 1.79942 4.7759 1.41182 5.01215 1.17765C5.13435 1.0646 5.28914 1 5.44392 1Z"
+            fill="#B9D5FD"/>
+        </svg>
+
+
+      </div>
+    </div>
+  </div>
+</div>

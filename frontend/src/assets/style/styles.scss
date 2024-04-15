@@ -1,0 +1,227 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'fonts';
+@import 'mixins';
+@import 'global';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+    position: relative;
+    top: -50px;
+    z-index: 3;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: white;
+ }
+ .owl-theme .owl-dots .owl-dot span {
+    border: 1px solid white;
+    background: transparent;
+}
+
+
+
+.article {
+    margin-bottom: 500px;
+                
+    .container {
+        .article-navigation {
+          
+            margin-bottom: 60px;
+            font-family: "Montserrat";
+            font-size: 16px;
+            font-weight: 400;
+                color: #B9D5FD;
+                span{
+                margin-right: 8px;
+                }
+            .article-navigation-two {
+            font-family: "Montserrat";
+            font-size: 16px;
+            font-weight: 500;
+                color: #709FDC;
+            }
+            .article-navigation-own{
+                cursor: pointer;
+            }
+        }
+        .article-main-block {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            .article-main-block-text {
+                max-width: 607px;
+                .article-main-block-text-title {
+                    margin-bottom: 40px;
+                    font-family: "Lora";
+                    font-size: 38px;
+                    font-weight: 400;
+                    line-height: 49px;
+                    color: #709FDC;
+                }
+                .article-main-block-text-description {
+                    font-family: "Montserrat";
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 26px;
+                    color: #709FDC;
+
+                }
+            }
+            .article-main-block-img {
+
+               max-width: 527px;
+
+               img{
+                width: 100%;
+               }
+            }
+        }
+        .article-main {
+            display: flex;
+            justify-content: space-between;
+            .article-main-text {
+                max-width: 818px;
+
+                p{
+                    margin-bottom: 20px;
+                    font-family: "Montserrat";
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    color: #071739;
+                }
+                h3{
+                    margin-top: 40px;
+                    font-family: "Montserrat";
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 26px;
+                    color: #709FDC;
+
+                }
+            }
+            .article-main-read {
+                height: 560px;
+               
+                .article-main-read-title {
+                    font-family: "Lora";
+                    font-size: 26px;
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                    margin-top: 60px;
+                    color: #709FDC;
+                }
+                .article-main-read-list{
+                    display: grid;
+                    grid-template-columns: repeat(1,291px);
+                    gap: 40px 24px;
+
+                }
+            }
+        }
+        
+        .article-like-link {
+            display: flex;
+            align-items: center;
+            margin-top: 61px;
+            margin-bottom: 61px;
+            
+            span{
+                font-family: "Montserrat";
+                font-size: 14px;
+                font-weight: 500;
+                margin-right: 20px;
+                color: #709FDC;
+                cursor: pointer;
+            }
+        }
+        .article-comments {
+            .article-comments-loader{
+
+                margin-top: 100px;
+                margin-left: 100px;
+
+            }
+            .article-comments-notcomments{
+                font-family: "Montserrat";
+                font-size: 14px;
+                font-weight: 400;
+                color: #071739;
+                margin-top: -20px;
+                margin-bottom: 20px;
+
+            }
+            .article-comments-title {
+                font-family: "Lora";
+                font-size: 38px;
+                font-weight: 400;
+                color: #709FDC;
+                margin-bottom: 60px;
+
+
+            }
+            .article-comments-description {
+                font-family: "Montserrat";
+                font-size: 14px;
+                font-weight: 400;
+                color: #071739;
+                margin-bottom: 60px;
+                span{
+                 color: #709FDC;
+                 cursor: pointer;   
+                }
+
+            }
+
+            .article-comments-form {
+
+                .article-comments-form-input{
+                    border: 1.5px solid #709FDC;
+                    font-family: "Montserrat";
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: black;
+                        margin-bottom: 20px;
+                    resize: none;
+                    padding: 20px;
+                    border-radius: 3px;
+                    &::placeholder{
+                        font-family: "Montserrat";
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #A8ABA7;
+
+                    }
+
+                }
+                .article-comments-form-button {
+                    margin-bottom: 60px;
+                    width: 422px;
+                }
+            }
+           
+           
+            .article-comments-add {
+                margin-top: 60px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                .article-comments-add-text {
+                    font-family: "Montserrat";
+font-size: 20px;
+font-weight: 500;
+margin-right: 10px;
+color: #709FDC;
+
+                }
+                .article-comments-add-icon {
+                }
+            }
+           
+        }
+    }
+}
+
+

@@ -1,0 +1,68 @@
+@import '../../../../assets/style/mixins';
+
+
+
+.services-popup {
+    .services-popup-body {
+     
+        margin: 0 auto;
+        width: 727px;
+        height: 471px;
+        position: relative;
+
+        .services-popup-icon-close{
+            transform: translate(680px,30px);
+            cursor: pointer;
+        }
+
+        .services-popup-form {   
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+
+            .services-popup-form-title {
+                @include  head-lora-38;
+                margin-bottom: 30px;
+                text-align: center;
+                margin-top: 94px;
+            }
+            input{
+                width: 422px;
+                display: block;
+
+                
+            }
+            .input-services{
+                color: #709FDC;
+            }
+            .services-popup-form-buttom {
+                margin-top: 20px;
+                width: 422px;
+            }
+        }
+        .services-popup-finish {
+            display: flex;
+         align-items: center;
+         flex-direction: column;
+            .services-popup-finish-title {
+                @include  head-lora-38;
+                margin-top: 163px;
+                margin-bottom: 20px;
+               
+
+            }
+            .services-popup-finish-text {
+                font-family: "Montserrat";
+                font-size: 14px;
+                font-weight: 500;
+                color: #1E1A2B;
+                margin-bottom: 40px;
+            }
+            .services-popup-finish-buttom {
+                width: fit-content;
+            }
+        }
+       
+    }
+    
+}

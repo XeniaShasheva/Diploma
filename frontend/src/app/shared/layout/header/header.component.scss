@@ -1,0 +1,56 @@
+.header {
+    padding: 40px 0 40px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-weight: 500;
+        
+        .header-logo {
+            margin-right: 80px;
+            cursor: pointer;
+        }
+        .header-menu {
+            font-family: "Montserrat";
+            color: #071739;
+            margin: 0 193px 0px -15px;
+
+            ul {
+                display: flex;
+                align-items: center;
+               
+                a{
+                    padding: 0 15px ;
+                    cursor: pointer;
+                    color: #071739;
+                    
+                    &.active{
+                        color: #709FDC ;
+                    }
+                }
+            }
+            
+        }
+        .header-phone {
+            font-family: "Montserrat";
+            color: #709FDC ;
+            margin-right: 141px;
+        }
+        .header-actions a{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &.active{
+                width: 150px;
+            }
+
+                span{
+                font-family: "Montserrat";
+                margin-left: 7px;
+            }
+        }
+    }
+}

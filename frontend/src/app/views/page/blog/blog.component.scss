@@ -1,0 +1,156 @@
+@import '../../../../assets/style/mixins';
+
+
+.blog {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    .container {
+        .blog-title{
+            @include  head-lora-38;
+            margin-bottom: 50px;
+        }
+        .blog-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            .blog-filters {
+                display: flex;
+                .blog-filter {
+                    font-family: "Montserrat";
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #709FDC;
+                    display: flex;
+                    padding: 8px 20px;
+                    border: 1.5px solid #709FDC;
+                    border-radius: 5px;
+                    margin-right: 20px;
+                    height: 35px;
+                    
+                    span{
+                        margin-right: 8px;
+                    }
+                }
+            }
+            .blog-corting {
+                position: relative;
+               
+                .blog-sorting-head {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 12px 0;
+                    cursor: pointer;
+
+                    span{
+                        margin-right: 50px;
+                    }
+                   
+                }
+                .blog-sorting-body {
+                    display: none;
+                    position: absolute;
+                    top: 45px;
+                    left: 0;
+                    width: 257px;
+                    padding: 12px 23px;
+                    background-color: white;
+                    z-index: 3;
+
+                    .blog-sorting-item {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 14px;
+                        padding: 5px 0;
+                        cursor: pointer;
+
+                        &:last-child{
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+                &.open{
+                    .blog-sorting-head {
+                        width: 257px;
+                        padding: 12px 23px;
+                        border-radius: 5px 5px 0 0;
+                        background-color: #B9D5FD;
+
+                        svg{
+                            transform: rotate(180deg);
+                        }
+                    }
+                    .blog-sorting-body {
+                        border-radius: 0 0 5px 5px;
+                        display: block;
+
+                        .blog-sorting-item {
+                           
+                        }
+                    }
+                }
+            }
+           
+           
+        }
+        .catalog-products {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 40px 24px;
+        //   flex-wrap: wrap;
+        //   margin: 0 -12px;
+        }
+        .pagination {
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .pagination-arrow {
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                &.disabled path{
+
+                    fill: #d9d9d993;
+                }
+            }
+            .pagination-pages {
+                margin-left: 40px;
+                margin-right: 40px;
+                display: flex;
+                align-items: center;
+                .pagination-page {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: "Montserrat";
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 26px;
+                    margin-right: 40px;
+                    cursor: pointer;
+                    color: #071739;
+
+                    &.active{
+
+                        color: #b9d5fd;
+                    }
+
+                    &:last-child{
+                        margin-right: 0px;
+                    }
+
+                }
+            }
+           
+        }
+    }
+}
+
+.pagination-arrow-prev{
+    transform: rotate(180deg);
+}
+

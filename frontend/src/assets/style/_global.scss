@@ -1,0 +1,60 @@
+html,body, *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.container{
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+li{
+    list-style-type:none
+}
+.button{
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 400;
+    padding: 15px 20px;
+    color: #FFFFFF;
+    background-color: #709FDC;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+input{
+    border: 1px solid #709FDC;
+    padding: 17px 0 17px 20px;
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 3px;
+
+    &:last-child{
+        margin-bottom: 10px;
+    }
+
+     ::placeholder{
+        font-family: "Montserrat";
+        font-size: 14px;
+        font-weight: 400;
+        color: #A8ABA7;
+     }
+}
+button{
+    border: 0;
+    cursor: pointer;
+}
+button:disabled{
+    background-color: #A8ABA7;
+}
+
+.services-popup{
+    overflow: hidden;
+}

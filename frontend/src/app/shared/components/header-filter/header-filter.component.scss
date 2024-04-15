@@ -1,0 +1,19 @@
+.blog-filter {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 400;
+    color: #709FDC;
+    display: flex;
+    padding: 8px 20px;
+    border: 1.5px solid #709FDC;
+    border-radius: 5px;
+    margin-right: 20px;
+    height: 35px;
+    
+    span{
+        margin-right: 8px;
+    }
+    a{
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,61 @@
+@import '../../assets/style/mixins';
+
+
+.auth-body {
+   
+    width: 435px;
+
+    .auth-title {
+        @include head-lora-36
+        }
+
+        .auth-form {
+            
+            .auth-button {
+
+                .button-auth{
+                    width: 422px !important;
+                }
+
+            }
+
+            .auth-chetbox{
+                display: flex;
+                align-items: baseline;
+                input{
+                    margin: 0;
+                    width: fit-content;
+                    
+                }
+                label{
+                    font-family: "Montserrat";
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    color: #071739;
+                    margin-left: 10px;
+                }
+            }
+            
+            .auth-chetbox {
+                margin-bottom: 40px;
+            }
+            .auth-link {
+                margin-top: 10px;
+                font-family: "Montserrat";
+                font-size: 14px;
+                font-weight: 400;
+                color: #1E1A2B;
+                a{
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #709FDC;
+                }
+    
+            }
+        }
+       
+}
+
+.auth-img {
+}

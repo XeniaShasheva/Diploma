@@ -1,0 +1,97 @@
+.comment {
+    margin-bottom: 40px;
+    .comment-header {
+        display: flex;
+        margin-bottom: 15px;
+        align-items: center;
+
+        .comment-header-icon {
+            margin-right: 26px;
+        }
+        .comment-header-data {
+            .comment-header-data-name {
+                margin-bottom: 10px;
+font-family: "Montserrat";
+font-size: 18px;
+font-weight: 600;
+color: #709FDC;
+
+
+            }
+            .comment-header-date-text {
+                font-family: "Montserrat";
+font-size: 14px;
+font-weight: 600;
+color: #BEBEBE;
+
+            }
+        }
+    }
+    .comment-text {
+        font-family: "Montserrat";
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+color: #071739;
+margin-bottom: 39px;
+
+
+    }
+    .comment-footer {
+        display: flex;
+        .comment-footer-okline {
+                margin-right: 15px;
+                display: flex;
+                cursor: pointer;
+            .comment-footer-okline-number {
+                margin-right: 3px;
+                font-family: "Montserrat";
+                font-size: 14px;
+                font-weight: 600;
+                color: #071739;
+
+            }
+            .comment-footer-okline-icon{   
+            }
+            &.click{
+
+                .comment-footer-okline-number {
+                    color: #709FDC;
+                }
+                .comment-footer-okline-icon path{
+                    stroke: #709FDC;
+                }
+            }
+        }
+        .comment-footer-disline {
+                margin-right: 15px;
+                display: flex;
+                cursor: pointer;
+            .comment-footer-disline-number {
+                margin-right: 3px;
+                font-family: "Montserrat";
+                font-size: 14px;
+                font-weight: 600;
+                color: #071739;
+            }
+            .comment-footer-disline-icon{
+
+
+            }
+
+            &.click{
+
+                .comment-footer-disline-number {
+                    color: #709FDC;
+                }
+                .comment-footer-disline-icon path{
+                    stroke: #709FDC;
+                }
+            }
+        }
+        .comment-footer-icon-importenr {
+            cursor: pointer;
+        }
+    }
+}
+

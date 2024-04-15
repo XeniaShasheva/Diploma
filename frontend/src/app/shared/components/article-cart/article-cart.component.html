@@ -1,0 +1,18 @@
+<div class="card-itm">
+    <div class="card-img">
+        <img src="{{article.image}}" alt="" *ngIf="!article.id">
+        <!-- <img src="http://localhost:3000/images/articles/{{article.image}}" alt="" *ngIf="article.id"> -->
+        <img src="/assets/img/articles/{{article.image}}" alt="" *ngIf="article.id">
+    
+        <div class="card-category" *ngIf="article.category">{{article.category}}</div>
+    </div>
+    <div class="card-title">{{article.title}}</div>
+    <div class="card-text">{{article.description}}</div>
+    <div class="card-footer" *ngIf="article.price">
+        <div class="card-price">{{article.price}}</div>
+        <a class="button card-button" (click)="showPopup()">Подробнее</a>
+    </div>
+    <div class="card-footer" *ngIf="!article.price">
+        <div [routerLink]="'/article/'+article.url"  class="card-footer-top-link">Читать дальше</div>
+    </div>
+</div>
